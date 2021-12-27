@@ -1,0 +1,459 @@
+body {
+  font-family: 'Raleway', 'Roboto', sans-serif;
+  background-color: #ffffff;
+  letter-spacing: 0.03em;
+}
+:root {
+  --primary-text-color: #212121;
+  --text-color: #757575;
+  --text-color-actve: #ffffff;
+  --accent-color: #2196f3;
+  --button-hover: #188ce8;
+  --footer-color: #2f303a;
+  --background-team: #f5f4fa;
+  --border-header: #ececec;
+  --border-card-portfl: #eeeeee;
+}
+
+/*^ НЕ ВИДНО НА СТРАНИЦЕ НО ВИДНО В ГУГЛ  */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/*^  ----------ГЛОБАЛЬНЫЕ СТИЛИ --------------- */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+/*^ СБРАСЫВАЕМ СТИЛИ ДЛЯ ЭЛЕМЕНТОВ  УТИЛИТЫ*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* a[href] {
+  text-decoration: none;
+} */
+
+/*^ ----------ПОЗИЦИОНИРОВАНИЕ ДЛЯ ХЕДЕРА-------  */
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav,
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.item:not(:last-child),
+.link.list-link:not(:last-child) {
+  margin-right: 50px;
+}
+
+.link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.content {
+  margin-left: auto;
+}
+
+.site-nav .link {
+  display: block;
+}
+
+/*^ Делает активной вкладку текущей страницы */
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+.header {
+  border: 1px solid var(--border-header);
+}
+
+/*^ ---------- Стиль для ЛОГОТИПА -----------------------*/
+.site-logo {
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.home {
+  margin-right: 93px;
+}
+
+.dark-logo {
+  color: var(--primary-text-color);
+}
+
+/*^ Стиль для лого в футере */
+.light-logo {
+  color: var(--text-color-actve);
+}
+
+/*^  Стили для ссылок хедере и контактов общие */
+.site-nav,
+.list-link {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--text-color);
+  list-style: none;
+  letter-spacing: 0.02em;
+}
+
+/*^ Стили для контактов в хедере*/
+.link.list-link {
+  color: var(--text-color);
+}
+
+.link.list-link:hover,
+.link.list-link:focus {
+  color: var(--accent-color);
+}
+
+/*^ Стили для ссылок хедера и контакто */
+.link {
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+/*^ Стили для ссылок навигации хедера при наведении*/
+.list .link:hover,
+.list .link:focus {
+  color: var(--accent-color);
+}
+
+.contact {
+  list-style: none;
+}
+
+/*^ ----------СТИЛИ ДЛЯ HERO---------------- */
+.hero {
+  background-color: var(--footer-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+/*^ ----------Стиль заголовка */
+.hero-title {
+  font-family: Roboto;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+/*^ ----------СТИЛИ ДЛЯ КНОПКИ В HERO--------------- */
+.hero-button .hero-link {
+  color: var(--text-color-actve);
+}
+
+.hero-button {
+  margin-top: 30px;
+  border: transparent;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--text-color-actve);
+  background-color: var(--accent-color);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--button-hover);
+}
+
+.hero-link {
+  text-decoration: none;
+}
+
+/*^ ----------СТИОИ ДЛЯ FEATURE------------------ */
+.feature-list {
+  display: flex;
+  list-style: none;
+}
+
+.feature-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.feature-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #212121;
+}
+
+.feature-descriotion {
+  margin-top: 10px;
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: #757575;
+}
+
+/*^ Стили для заголовка чем мы занимаемся*/
+/*^ и наша конманда  */
+.heading-doing,
+.heading-team {
+  margin-bottom: 50px;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: #212121;
+}
+
+.work-img {
+  list-style: none;
+  display: flex;
+}
+
+.picture:not(:last-child) {
+  margin-right: 30px;
+}
+
+.picture-img {
+  display: block;
+}
+
+/*^ Стили для чем мы заниманиемся */
+
+.aur-team {
+  background-color: var(--background-team);
+}
+
+/*^ ----------НАША КОМАНДА-------------------  */
+.aur-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-item {
+  background-color: var(--text-color-actve);
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.card-content {
+  padding: 20px 24px;
+  border: 1px solid var(--border-card-portfl);
+}
+
+.team .team-content {
+  padding: 30px 0;
+  max-width: 270px;
+}
+
+.team-title {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.team-description {
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+/*^ СТИЛИ ВНУТРЕНИЕ ДЛЯ ЧЕМ МЫ ЗАНИМАЕМСЯ DOING  */
+.doing {
+  padding-top: 0;
+  padding-bottom: 94px;
+}
+
+/*^----------FILTERS--PORTFOLIO----------------  */
+.filters-portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.filters {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.filters-item:not(:last-child) {
+  margin-right: 9px;
+}
+
+.button-all {
+  padding: 6px 22px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: var(--background-team);
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.button-menu:hover,
+.button-menu:focus {
+  background-color: var(--accent-color);
+  color: var(--background-team);
+}
+
+.button-menu {
+  background-color: var(--background-team);
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  padding: 6px 22px;
+  letter-spacing: 0.03em;
+  border-radius: 4px;
+  border: transparent;
+}
+
+/*^----------PROJECKTS--PORTFOLIO----------------  */
+.projeckts {
+  margin-top: 50px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-bottom: -30px;
+}
+
+.projeckts-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.projeckts-link {
+  text-decoration: none;
+}
+
+.projeckts-title {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  color: var(--primary-text-color);
+}
+
+.projeckts-description {
+  font-family: Roboto;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--text-color);
+}
+
+/*^ ----------FOOTER------------------- */
+.footer {
+  background-color: var(--footer-color);
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.address-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.71;
+  color: rgb(255, 255, 255, 0.6);
+}
+
+.address-link:hover,
+.address-link:focus {
+  color: var(--text-color-actve);
+}
+
+.address-item:not(:first-child) {
+  margin-top: 9px;
+}
+
+.address {
+  margin-top: 20px;
+}
